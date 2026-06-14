@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OroSkin | Skincare Coreano</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+    body{background:#fff8f5;color:#3b2b2b}
+    header{background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 15px #ead6cf;padding:16px 7%;display:flex;justify-content:space-between;align-items:center}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:28px;color:#c98374}
+    .logo-badge{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#f4c7c3,#ead7b7);display:grid;place-items:center;color:white;font-weight:900}
+    nav a{margin-left:22px;text-decoration:none;color:#4b3838;font-weight:600}
+    .hero{min-height:82vh;padding:70px 7%;display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center;background:linear-gradient(135deg,#fff8f5,#f7ded9)}
+    .hero h1{font-size:58px;line-height:1.05;color:#3a2929;margin-bottom:20px}
+    .hero h1 span{color:#c98374}
+    .hero p{font-size:19px;line-height:1.6;margin-bottom:28px;color:#6b5555}
+    .btn{display:inline-block;background:#c98374;color:white;padding:14px 25px;border-radius:30px;text-decoration:none;font-weight:700;border:none;cursor:pointer}
+    .hero-card{background:white;border-radius:35px;padding:30px;box-shadow:0 20px 50px #e8c6be;text-align:center}
+    .hero-product{height:330px;border-radius:28px;background:radial-gradient(circle at top,#fff,#f3c9c2 45%,#e5b3a8);display:grid;place-items:center;font-size:95px}
+    section{padding:65px 7%}
+    .title{text-align:center;font-size:38px;margin-bottom:12px;color:#3a2929}
+    .subtitle{text-align:center;color:#7c6262;margin-bottom:40px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:25px}
+    .product{background:#fff;border-radius:25px;padding:20px;box-shadow:0 8px 25px #f0d8d2;transition:.2s}
+    .product:hover{transform:translateY(-5px)}
+    .img{height:190px;border-radius:22px;background:linear-gradient(145deg,#f9dfdc,#fff1d9);display:grid;place-items:center;font-size:58px;margin-bottom:15px}
+    .product h3{font-size:18px;margin-bottom:8px}
+    .product p{font-size:14px;color:#755f5f;min-height:45px;margin-bottom:12px}
+    .price{font-size:21px;color:#c98374;font-weight:800;margin-bottom:14px}
+    .add{width:100%;padding:12px;border-radius:22px;border:none;background:#3a2929;color:white;font-weight:700;cursor:pointer}
+    .about{background:#fff;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;border-radius:35px}
+    .about-box{background:#fff8f5;border-radius:28px;padding:35px}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:25px}
+    .feature{background:#fff;padding:22px;border-radius:22px;box-shadow:0 8px 20px #efd9d2;text-align:center}
+    .cart{position:fixed;right:20px;bottom:20px;background:#fff;border-radius:25px;box-shadow:0 10px 35px #c9a6a0;padding:18px;width:300px;max-height:420px;overflow:auto}
+    .cart h3{margin-bottom:10px}.cart-item{font-size:14px;border-bottom:1px solid #eee;padding:8px 0}.total{font-weight:900;margin:12px 0;color:#c98374}
+    footer{background:#3a2929;color:white;text-align:center;padding:35px 7%;margin-top:40px}
+    footer p{color:#ead7d1;margin-top:8px}
+    @media(max-width:800px){.hero,.about{grid-template-columns:1fr}.hero h1{font-size:40px}nav{display:none}.cart{position:static;width:auto;margin:20px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><div class="logo-badge">O</div>OroSkin</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="inicio" class="hero">
+    <div>
+      <h1>Tu glow coreano empieza en <span>OroSkin</span></h1>
+      <p>Skincare coreano seleccionado para una piel hidratada, luminosa y saludable. Compra en línea de forma fácil, bonita y segura.</p>
+      <a href="#productos" class="btn">Ver catálogo</a>
+    </div>
+    <div class="hero-card">
+      <div class="hero-product">✨</div>
+      <h2>Rutinas K-Beauty</h2>
+      <p>Bloqueadores, limpiadores, serums y cushions para todos los días.</p>
+    </div>
+  </main>
+
+  <section id="productos">
+    <h2 class="title">Productos destacados</h2>
+    <p class="subtitle">Catálogo de skincare coreano OroSkin</p>
+    <div class="grid" id="productGrid"></div>
+  </section>
+
+  <section id="nosotros" class="about">
+    <div class="about-box">
+      <h2 class="title" style="text-align:left">Sobre OroSkin</h2>
+      <p>OroSkin es una tienda en línea de skincare coreano creada para ofrecer productos virales, suaves y efectivos para el cuidado diario de la piel.</p>
+      <div class="features">
+        <div class="feature">🌸 Productos coreanos</div>
+        <div class="feature">🚚 Envíos a México</div>
+        <div class="feature">💗 Asesoría de rutina</div>
+      </div>
+    </div>
+    <div class="hero-product">🧴</div>
+  </section>
+
+  <div class="cart">
+    <h3>🛒 Carrito</h3>
+    <div id="cartItems">Aún no agregas productos.</div>
+    <div class="total" id="total">Total: $0 MXN</div>
+    <button class="btn" style="width:100%" onclick="checkout()">Comprar por WhatsApp</button>
+  </div>
+
+  <footer id="contacto">
+    <h2>OroSkin</h2>
+    <p>Skincare coreano online · Instagram: @oroskin.mx · WhatsApp: 55 0000 0000</p>
+  </footer>
+
+  <script>
+    const products = [
+      {name:'Bloqueador Tocobo Azul', desc:'Protección solar ligera con acabado fresco.', price:300, icon:'🩵'},
+      {name:'Bloqueador Tocobo Verde', desc:'Ideal para piel mixta o sensible.', price:300, icon:'💚'},
+      {name:'Bloqueador Tocobo Amarillo', desc:'Textura suave para uso diario.', price:300, icon:'💛'},
+      {name:'Skin1004 Hyalu-Cica Sun Serum', desc:'Bloqueador hidratante con centella.', price:300, icon:'☀️'},
+      {name:'Centella Sun Stick Azul', desc:'Protector solar en barra práctico.', price:300, icon:'🧊'},
+      {name:'Limpiador Facial Centella', desc:'Limpieza suave para retirar impurezas.', price:100, icon:'🫧'},
+      {name:'Ampoule SKIN1004 Centella', desc:'Serum calmante para piel sensible.', price:270, icon:'🌿'},
+      {name:'Medicube PDRN Pink Serum', desc:'Ayuda a mejorar luminosidad y textura.', price:270, icon:'💗'},
+      {name:'TIRTIR Red Cushion 21C', desc:'Maquillaje cushion de acabado uniforme.', price:270, icon:'❤️'},
+      {name:'Tocobo Lip Oil Berry Milk', desc:'Aceite labial hidratante con brillo.', price:270, icon:'🍓'}
+    ];
+
+    const cart = [];
+    const grid = document.getElementById('productGrid');
+    products.forEach((p, i) => {
+      grid.innerHTML += `
+        <div class="product">
+          <div class="img">${p.icon}</div>
+          <h3>${p.name}</h3>
+          <p>${p.desc}</p>
+          <div class="price">$${p.price} MXN</div>
+          <button class="add" onclick="addToCart(${i})">Agregar al carrito</button>
+        </div>`;
+    });
+
+    function addToCart(index){
+      cart.push(products[index]);
+      renderCart();
+    }
+
+    function renderCart(){
+      const items = document.getElementById('cartItems');
+      const total = cart.reduce((sum,p)=>sum+p.price,0);
+      items.innerHTML = cart.map(p=>`<div class="cart-item">${p.name} - $${p.price}</div>`).join('') || 'Aún no agregas productos.';
+      document.getElementById('total').innerText = `Total: $${total} MXN`;
+    }
+
+    function checkout(){
+      const total = cart.reduce((sum,p)=>sum+p.price,0);
+      const pedido = cart.map(p=>p.name).join(', ');
+      const msg = encodeURIComponent(`Hola OroSkin, quiero comprar: ${pedido}. Total: $${total} MXN`);
+      window.open(`https://wa.me/525500000000?text=${msg}`, '_blank');
+    }
+  </script>
+</body>
+</html>
