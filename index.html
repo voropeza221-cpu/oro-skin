@@ -114,7 +114,7 @@
     products.forEach((p, i) => {
       grid.innerHTML += `
         <div class="product">
-          <div class="img">${p.icon}</div>
+         <div class="img"><img src="${pag.imagen}" alt="${pag.nombre}"></div>
           <h3>${p.name}</h3>
           <p>${p.desc}</p>
           <div class="price">$${p.price} MXN</div>
