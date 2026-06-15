@@ -121,16 +121,16 @@
 
     const cart = [];
     const grid = document.getElementById('productGrid');
-    products.forEach((p, i) => {
-      grid.innerHTML += `
-        <div class="product">
-        <div class="img">${pag.icono}</div>
-          <h3>${p.name}</h3>
-          <p>${p.desc}</p>
-          <div class="price">$${p.price} MXN</div>
-          <button class="add" onclick="addToCart(${i})">Agregar al carrito</button>
-        </div>`;
-    });
+   products.forEach((p, i) => {
+  grid.innerHTML += `
+  <div class="product">
+    <div class="img">${p.icono}</div>
+    <h3>${p.nombre}</h3>
+    <p>${p.descripcion}</p>
+    <div class="price">$${p.precio} MXN</div>
+    <button class="add" onclick="addToCart(${i})">Agregar al carrito</button>
+  </div>`;
+});
 
     function addToCart(index){
       cart.push(products[index]);
@@ -139,14 +139,14 @@
 
     function renderCart(){
       const items = document.getElementById('cartItems');
-      const total = cart.reduce((sum,p)=>sum+p.price,0);
-      items.innerHTML = cart.map(p=>`<div class="cart-item">${p.name} - $${p.price}</div>`).join('') || 'Aún no agregas productos.';
+      const total = cart.reduce((sum,p)=>sum+p.precio,0);
+      items.innerHTML = cart.map(p=>`<div class="cart-item">${p.nombre} - $${p.precio}</div>`).join('') || 'Aún no agregas productos.';
       document.getElementById('total').innerText = `Total: $${total} MXN`;
     }
 
     function checkout(){
-      const total = cart.reduce((sum,p)=>sum+p.price,0);
-      const pedido = cart.map(p=>p.name).join(', ');
+      const total = cart.reduce((sum,p)=>sum+p.precio,0);
+      const pedido = cart.map(p=>p.nombre).join(', ');
       const msg = encodeURIComponent(`Hola OroSkin, quiero comprar: ${pedido}. Total: $${total} MXN`);
       window.open(`https://wa.me/525500000000?text=${msg}`, '_blank');
     }
