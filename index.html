@@ -97,24 +97,34 @@
 
   <script>
     const products = [
-      {name:'Bloqueador Tocobo Azul', desc:'Protección solar ligera con acabado fresco.',price:300,imagen: WhatsApp Image 2026-06-14 at 20.11.02 (5).jpeg'},
-      {name:'Bloqueador Tocobo Verde', desc:'Ideal para piel mixta o sensible.', price:300, imagen: WhatsApp Image 2026-06-14 at 20.11.02 (4).jpeg},
-      {name:'Bloqueador Tocobo Amarillo', desc:'Textura suave para uso diario.', price:300, imagen: WhatsApp Image 2026-06-14 at 20.11.02 (3).jpeg},
-      {name:'Skin1004 Hyalu-Cica Sun Serum', desc:'Bloqueador hidratante con centella.', price:350,imagen: WhatsApp Image 2026-06-14 at 20.11.02 (2).jpeg},
-      {name:'Centella Sun Stick Azul', desc:'Protector solar en barra práctico.', price:300,imagen: WhatsApp Image 2026-06-14 at 20.11.02 (1).jpeg},
-      {name:'Limpiador Facial doble limpieza Centella', desc:'Limpieza suave para retirar impurezas.',price:700, imagen: WhatsApp Image 2026-06-14 at 20.11.02.jpeg'},
-      {name:'Dr.Althea 345 Relief', desc:'Serum calmante para piel sensible.', price:400,imagen: WhatsApp Image 2026-06-14 at 20.11.01.jpeg},
-      {name:'Medicube PDRN Pink Serum', desc:'Ayuda a mejorar luminosidad y textura.', price:420,imagen:  WhatsApp Image 2026-06-14 at 20.11.01 (3).jpeg},
-      {name:'TIRTIR Red Cushion 21C', desc:'Maquillaje cushion de acabado uniforme.', price:340,imagen: WhatsApp Image 2026-06-14 at 20.11.01 (2).jpeg},
-      {name:'Tocobo Lip Oil Berry Milk', desc:'Aceite labial hidratante con brillo.', price:270, icon:'🍓'}
-    ];
+      const productos = [
+  {nombre:'Bloqueador Tocobo Azul', descripcion:'Protección solar ligera con acabado fresco.', precio:300, icono:'💙'},
+  
+  {nombre:'Bloqueador Tocobo Verde', descripcion:'Ideal para piel mixta o sensible.', precio:300, icono:'💚'},
+  
+  {nombre:'Bloqueador Tocobo Amarillo', descripcion:'Textura suave para uso diario.', precio:300, icono:'💛'},
+  
+  {nombre:'Skin1004 Hyalu-Cica Suero Solar', descripcion:'Bloqueador hidratante con centella.', precio:300, icono:'☀️'},
+  
+  {nombre:'Centella Sun Stick Azul', descripcion:'Protector solar en barra práctica.', precio:300, icono:'🩵'},
+  
+  {nombre:'Limpiador Facial Centella', descripcion:'Limpieza suave para retirar impurezas.', precio:100, icono:'🫧'},
+  
+  {nombre:'Dr.Althea 345 Alivio', descripcion:'Serum calmante para piel sensible.', precio:270, icono:'🌿'},
+  
+  {nombre:'Medicube PDRN Suero Rosa', descripcion:'Ayuda a mejorar luminosidad y textura.', precio:270, icono:'🩷'},
+  
+  {nombre:'TIRTIR Red Cushion 21C', descripcion:'Maquillaje cojín de acabado uniforme.', precio:270, icono:'❤️'},
+  
+  {nombre:'Aceite labial Tocobo con sabor a frutos rojos', descripcion:'Aceite labial hidratante con brillo.', precio:270, icono:'💄'}
+];
 
     const cart = [];
     const grid = document.getElementById('productGrid');
     products.forEach((p, i) => {
       grid.innerHTML += `
         <div class="product">
-         <div class="img"><img src="${pag.imagen}" alt="${pag.nombre}"></div>
+        <div class="img">${pag.icono}</div>
           <h3>${p.name}</h3>
           <p>${p.desc}</p>
           <div class="price">$${p.price} MXN</div>
