@@ -5,13 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OroSkin | Skincare Coreano</title>
   <style>
-    .producto-img{
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-}
+
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
     body{background:#fff8f5;color:#3b2b2b}
     header{background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 15px #ead6cf;padding:16px 7%;display:flex;justify-content:space-between;align-items:center}
@@ -31,7 +25,21 @@
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:25px}
     .product{background:#fff;border-radius:25px;padding:20px;box-shadow:0 8px 25px #f0d8d2;transition:.2s}
     .product:hover{transform:translateY(-5px)}
-    .img{height:190px;border-radius:22px;background:linear-gradient(145deg,#f9dfdc,#fff1d9);display:grid;place-items:center;font-size:58px;margin-bottom:15px}
+    .img{
+    height:190px;
+    border-radius:22px;
+    background:linear-gradient(145deg,#f9fdfc,#fff1d9);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.img img{
+    max-width:150px;
+    max-height:150px;
+    object-fit:contain;
+}
     .product h3{font-size:18px;margin-bottom:8px}
     .product p{font-size:14px;color:#755f5f;min-height:45px;margin-bottom:12px}
     .price{font-size:21px;color:#c98374;font-weight:800;margin-bottom:14px}
@@ -187,7 +195,7 @@ imagen:'aceite labial con sabor a frutos rojos.jpeg'
   grid.innerHTML += `
   <div class="product">
   <div class="img">
-<img src="${pag.imagen}" class="producto-img">
+<img src="${p.imagen}" class="producto-img">
 </div>
     <h3>${p.nombre}</h3>
     <p>${p.descripcion}</p>
