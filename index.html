@@ -195,7 +195,9 @@ imagen:'aceite labial con sabor a frutos rojos.jpeg'
   grid.innerHTML += `
   <div class="product">
   <div class="img">
-<img src="${p.imagen}" style="width:150px;height:150px;object-fit:contain;">
+<div class="img">
+  <img src="${p.imagen}" style="max-width:150px; max-height:150px; width:auto; height:auto; object-fit:contain;">
+</div>
 </div>
     <h3>${p.nombre}</h3>
     <p>${p.descripcion}</p>
